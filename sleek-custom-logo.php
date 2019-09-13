@@ -1,5 +1,5 @@
 <?php
-namespace Sleek;
+namespace Sleek\CustomLogo;
 
 add_filter('get_custom_logo', function ($html, $blogId) {
 	$append = (is_array($blogId) and isset($blogId['append']) and !empty($blogId['append'])) ? $blogId['append'] : '';
