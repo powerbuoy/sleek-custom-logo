@@ -9,6 +9,5 @@
     ],
     "autoload": {
         "files": ["sleek-custom-logo.php"]
-    },
-    "require": {}
+    }
 }
