@@ -14,13 +14,13 @@ add_filter('get_custom_logo', function ($html, $blogId) {
 		}
 
 		# Check site-logo.svg
-		if ($svgLogo = locate_template('dist/assets/svg/site-logo' . $append . '.svg')) {
+		if ($svgLogo = locate_template('dist/assets/site-logo' . $append . '.svg')) {
 			if ($inlineSvg) {
 				# TODO: Is aria-label correct? # TODO: Should I remove <?xml etc?
 				$logo = str_replace('<svg', '<svg aria-label="' . $alt . '"', file_get_contents($svgLogo));
 			}
 			else {
-				$logo = '<img src="' . get_stylesheet_directory_uri() . '/dist/assets/svg/site-logo' . $append . '.svg' . '" alt="' . $alt . '">';
+				$logo = '<img src="' . get_stylesheet_directory_uri() . '/dist/assets/site-logo' . $append . '.svg' . '" alt="' . $alt . '">';
 			}
 		}
 		# Check site-logo.png
