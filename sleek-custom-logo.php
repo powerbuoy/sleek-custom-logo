@@ -3,7 +3,7 @@ namespace Sleek\CustomLogo;
 
 add_filter('get_custom_logo', function ($html, $blogId) {
 	$append = (is_array($blogId) and isset($blogId['append']) and !empty($blogId['append'])) ? $blogId['append'] : '';
-	$inlineSvg = (is_array($blogId) and isset($blogId['svg']) and $blogId['svg']) ? true : false;
+	$inlineSvg = (is_array($blogId) and isset($blogId['inline_svg']) and $blogId['inline_svg']) ? true : false;
 
 	# User has not defined a custom logo - include our own
 	if (empty($html)) {
