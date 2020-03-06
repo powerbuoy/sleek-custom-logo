@@ -21,7 +21,9 @@ N/A
 
 ## Functions
 
-N/A
+### `the_custom_logo($args)`
+
+This is the native WordPress `the_custom_logo()` but we add the `$args` argument which enables you to specify `inline_svg` (`true`/`false`) and `append` (`String` to append to `site-logo` filename).
 
 ## Classes
 
