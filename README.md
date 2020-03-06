@@ -1,4 +1,4 @@
-# SleekCustomLogo
+# Sleek Custom Logo
 
 Hooks into `the_custom_logo()` and renders one of:
 
