@@ -1,4 +1,10 @@
-# Sleek Custom Logo
+# [Sleek Custom Logo](https://github.com/powerbuoy/sleek-custom-logo/)
+
+[![Packagist](https://img.shields.io/packagist/vpre/powerbuoy/sleek-custom-logo.svg?style=flat-square)](https://packagist.org/packages/powerbuoy/sleek-custom-logo)
+[![GitHub license](https://img.shields.io/github/license/powerbuoy/sleek-custom-logo.svg?style=flat-square)](https://github.com/powerbuoy/sleek-custom-logo/blob/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/powerbuoy/sleek-custom-logo.svg?style=flat-square)](https://github.com/powerbuoy/sleek-custom-logo/issues)
+[![GitHub forks](https://img.shields.io/github/forks/powerbuoy/sleek-custom-logo.svg?style=flat-square)](https://github.com/powerbuoy/sleek-custom-logo/network)
+[![GitHub stars](https://img.shields.io/github/stars/powerbuoy/sleek-custom-logo.svg?style=flat-square)](https://github.com/powerbuoy/sleek-custom-logo/stargazers)
 
 Hooks into `the_custom_logo()` and renders one of:
 

@@ -1,5 +1,6 @@
 {
     "name": "powerbuoy/sleek-custom-logo",
+    "description": "Hooks into the_custom_logo() and improves it.",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
