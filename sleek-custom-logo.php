@@ -4,6 +4,7 @@ namespace Sleek\CustomLogo;
 add_filter('get_custom_logo', function ($html, $blogId) {
 	$append = (is_array($blogId) and isset($blogId['append']) and !empty($blogId['append'])) ? $blogId['append'] : '';
 	$inlineSvg = (is_array($blogId) and isset($blogId['inline_svg']) and $blogId['inline_svg']) ? true : false;
+	$svgId = (is_array($blogId) and isset($blogId['svg_id'])) ? $blogId['svg_id'] : null;
 
 	# User has not defined a custom logo - include our own
 	if (empty($html)) {
@@ -22,6 +23,10 @@ add_filter('get_custom_logo', function ($html, $blogId) {
 		if (file_exists("$path.svg")) {
 			if ($inlineSvg) {
 				$logo = file_get_contents("$path.svg");
+
+				if ($svgId) {
+					$logo = str_replace('<svg', '<svg id="' . $svgId . '"', $logo);
+				}
 			}
 			else {
 				$logo = "<img src=\"$uri.svg\" alt=\"$alt\">";
