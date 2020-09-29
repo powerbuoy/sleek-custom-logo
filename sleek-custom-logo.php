@@ -45,7 +45,21 @@ add_filter('get_custom_logo', function ($html, $blogId) {
 	}
 	# User _has_ defined a custom logo - just replace the class name
 	else {
-		$html = str_replace('custom-logo-link', 'site-logo', $html);
+		# The custom logo is SVG - check if inline SVG is requested
+		if ($inlineSvg and preg_match('/src="(.*?).svg"/', $html, $matches)) {
+			$path = wp_make_link_relative($matches[1] . '.svg');
+			$logo = file_get_contents(ABSPATH . $path);
+
+			if ($svgId) {
+				$logo = str_replace('<svg', '<svg id="' . $svgId . '"', $logo);
+			}
+
+			return '<a href="' . home_url('/') . '" class="site-logo">' . $logo . '</a>';
+		}
+		# Not inline SVG
+		else {
+			$html = str_replace('custom-logo-link', 'site-logo', $html);
+		}
 	}
 
 	return $html;
